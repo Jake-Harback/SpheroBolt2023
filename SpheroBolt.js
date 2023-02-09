@@ -3,14 +3,20 @@
 //Project: Sphero Bolt
 
 
+/** 
+ * Hello World practice program
+ * LED turn to blue 
+ * Forward for 2 seconds at a speed of 60 
+*/ 
+
 //hello world practice program
-async function startProgram() {
+async function helloWorld() {
 	await speak("Hello World", true);
 	setMainLed({ r: 0, g: 0, b: 255});
 	setSpeed(60);
 	await delay (2);
 	setSpeed(0);
-
+} 
 
 	/**
  * ninetyDegree function goes forward for a specified amount of time and speed
@@ -22,9 +28,10 @@ async function ninetyDegree() {
 	await delay(1);
 	await roll((getHeading() + 90), 60, 4); // heading 90 degrees at 60 speed for 4 seconds
 
-}
+} 
 /**
  * startProgram function sends the program to your Sphero Bolt
 */
 async function startProgram() {
-	await ninetydegree()	//<--Calling the ninetydegree function to run it
+	await helloWorld() //<--calling the hello world function
+	await ninetyDegree()	//<--Calling the ninetydegree function to run it 
