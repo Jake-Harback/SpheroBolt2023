@@ -3,12 +3,6 @@
 //Project: Sphero Bolt
 
 
-/** 
- * Hello World practice program
- * LED turn to blue 
- * Forward for 2 seconds at a speed of 60 
-*/ 
-
 //hello world practice program
 async function helloWorld() {
 	await speak("Hello World", true);
@@ -35,3 +29,26 @@ async function ninetyDegree() {
 async function startProgram() {
 	await helloWorld() //<--calling the hello world function
 	await ninetyDegree()	//<--Calling the ninetydegree function to run it 
+} 
+
+async function startProgram() {
+
+	setMainLed({ r: 0, g: 0, b: 255 });
+
+	await speak("Hello Square", true);
+
+	await delay(1);
+
+	for (var _i1 = 0; _i1 < 4; _i1++) {
+
+		setMainLed(getRandomColor());
+
+		await Sound.Game.Coin.play(true);
+
+		await roll((getHeading() + 90), 60, 1);
+
+		await delay(1);
+
+	}
+
+}
