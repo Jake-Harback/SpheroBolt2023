@@ -1,3 +1,3 @@
-//Programmer: Jake Harback 
-//Date: 2.6.2023
-//Project: Sphero Bolt
+//Team: Jake Harback, Andrew Krusniak 
+//Date: 2.13.2023
+//Project: Sphero Bolt Maze
