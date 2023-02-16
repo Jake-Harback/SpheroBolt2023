@@ -51,3 +51,14 @@ await roll(130, 40.5, 1.75);
 await Sound.Effects.Thunder.play(true)
 
 }  
+
+/**
+ *
+*/
+async function Change to green() {
+await delay(1.5);
+await roll(180, 43.75, 1);
+await delay(2.5);
+await roll(89.5, 41, 1.1);
+setMainLed({ r: 0, g: 255, b: 0})
+}
