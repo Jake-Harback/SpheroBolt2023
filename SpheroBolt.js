@@ -15,13 +15,18 @@ async function blue() {
 
 //sound 1 
 
-async function firstSound() {
-	await roll(0, 45, 2); 
-	setHeading(90); 
-	await roll(0, 25, 2); 
-	await Sound.Mechanical.TruckHorn.play(); 
-	
+/**
+ *
+*/
+async function soundnumber1(){
+  await roll(90, 69, 1);
+  await delay(3);
+  await roll(180, 65, 1);
+  await spin(42, 2);
+  await Sound.Effects.Fireworks.play(true) 
 }
+
+//red 
 
 
 
