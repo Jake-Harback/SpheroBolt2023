@@ -28,7 +28,16 @@ async function soundnumber1(){
 
 //red 
 
-
+/**
+ *
+*/
+async function Change to RED() {
+await roll(217.5, 56.75, 1);
+await delay(3);
+await roll(132.5, 41, 1.3);
+setMainLed({ r: 255, g: 0, b: 0})
+await delay(3);
+}
 
 
 
