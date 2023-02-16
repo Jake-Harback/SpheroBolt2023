@@ -39,11 +39,15 @@ setMainLed({ r: 255, g: 0, b: 0})
 await delay(3);
 }
 
+//sound 2
 
+/**
+ *
+*/
+async function Soundnumber2() {
+await roll(42.5, 55.75, 1);
+await delay(2.5);
+await roll(130, 40.5, 1.75);
+await Sound.Effects.Thunder.play(true)
 
-
-async function startProgram() { 
-	await blue();
-	await firstSound(); 
-	
 }  
