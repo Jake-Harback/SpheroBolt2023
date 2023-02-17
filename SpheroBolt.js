@@ -5,13 +5,14 @@
 
 //blue 
 
-async function blue() {
-    await scrollMatrixText('start', { r: 66, g: 56, b: 255 }, 30, true)
-    await roll(0, 70, 2);
-    setHeading(90);
-    setMainLed({r: 0, g: 0, b: 255 });  
+async function CheckpointBLUE() {
+  await scrollMatrixText('START', { r: 255, g: 0 , b: 0 }, 30, true);
+  await roll(0, 78.5, 2);
+  await spin(90,2);
+  setMainLed({ r: 0, g: 0, b: 255 })
+}
     
-} 
+
 
 //sound 1 
 
@@ -61,4 +62,13 @@ await roll(180, 43.75, 1);
 await delay(2.5);
 await roll(89.5, 41, 1.1);
 setMainLed({ r: 0, g: 255, b: 0})
+}
+
+async function startProgram() {
+await Change to BLUE(); // Calls CheckpointBLUE
+await Soundnumber_1();
+await Change to RED();
+await Soundnumber_2();
+await Change to GREEN();
+await Soundnumber_3();
 }
